@@ -15,12 +15,12 @@
 
       <nav>
         <ul>
-          <li></li>
+          <li> <!-- Food Finder logo goes here--></li>
         </ul>
       </nav>
 
+      <!-- Header information -->
     </header>
-
 
     <main>
       <section class="diet-form">
@@ -30,20 +30,21 @@
               <legend>Select your dietary preferences</legend>
         
               <label for="dairy">Dairy Free</label>
-              <input type="radio" id="dairy" value="dairy-free">
+              <input type="checkbox" id="dairy" name="preference" value="dairy-free">
         
               <label for="gluten">Gluten Free</label>
-              <input type="radio" id="gluten" value="gluten-free">
+              <input type="checkbox" id="gluten" name="preference" value="gluten-free">
         
               <label for="vegetarian-diet">Vegetarian</label>
-              <input type="radio" id="vegetarian-diet" value="vegetarian">
+              <input type="checkbox" id="vegetarian-diet" name="preference" value="vegetarian">
         
               <label for="vegan-diet">Vegan</label>
-              <input type="radio" id="vegan-diet" value="vegan">
+              <input type="checkbox" id="vegan-diet" name="preference" value="vegan">
         
             </fieldset>
-        
-            <select name="" id="">
+            
+            <label for="type-of-cuisine">Choose your preferred cuisine</label>
+            <select name="type-of-cuisine" id="type-of-cuisine">
               <option value="african">African</option>
               <option value="american">American</option>
               <option value="british">British</option>
@@ -71,6 +72,8 @@
               <option value="thai">Thai</option>
               <option value="vietnamese">Vietnamese</option>
             </select>
+
+            <button type="submit">Find my recipe</button>
           </form>
         </div>
       </section>
