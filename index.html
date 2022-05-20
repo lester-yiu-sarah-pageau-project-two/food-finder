@@ -12,12 +12,16 @@
   <body>
 
     <header>
-
-      <nav>
-        <ul>
-          <li> <!-- Food Finder logo goes here--></li>
-        </ul>
-      </nav>
+  
+      <div class="wrapper">
+        <nav>
+          <ul>
+            <li>
+              <img src="./assets/food-finder-logo.png" alt="food finder">
+            </li>
+          </ul>
+        </nav>
+      </div>
 
       <!-- Header information -->
     </header>
@@ -37,6 +41,7 @@
                     <input type="checkbox" id="dairy" name="preference" value="dairy-free">
                   </div>                  
                   <div class="choice">
+                    <!-- Self reminder: add tab index accessibility -->
                     <label for="gluten">Gluten Free</label>
                     <input type="checkbox" id="gluten" name="preference" value="gluten-free">
                   </div>
@@ -84,7 +89,7 @@
               <option value="vietnamese">Vietnamese</option>
             </select>
 
-            <button type="submit">Find my recipe</button>
+            <button type="submit"><i class="fa-solid fa-utensils"></i>Find my recipe</button>
           </form>
         </div>
       </section>
