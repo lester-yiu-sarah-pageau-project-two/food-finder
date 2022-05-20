@@ -1,3 +1,29 @@
-fieldset {
-    border: 0;
+.meal-filter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 4px solid black;
+    padding: 30px 60px;
+
+    fieldset {
+        border: 0;
+        width: 100%;
+    }
+
+    legend {
+        margin: 0 auto;
+    }
+
+    .diet-choices {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        .choice {
+            padding: 5px;
+            margin: 10px 5px;
+            border: 2px solid black;
+        }
+    }
+
 }
