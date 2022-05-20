@@ -22,7 +22,10 @@
       <!-- Header information -->
     </header>
 
+
     <main>
+    <!-- <i class="fa-regular fa-square-check"></i> -->
+    <!-- <i class="fa-solid fa-square-check"></i> -->      
       <section class="diet-form">
         <div class="wrapper">
           <form action="" class="meal-filter">
@@ -32,8 +35,7 @@
                   <div class="choice">
                     <label for="dairy">Dairy Free</label>
                     <input type="checkbox" id="dairy" name="preference" value="dairy-free">
-                  </div>
-                  
+                  </div>                  
                   <div class="choice">
                     <label for="gluten">Gluten Free</label>
                     <input type="checkbox" id="gluten" name="preference" value="gluten-free">
@@ -51,8 +53,9 @@
                 </div>
             </fieldset>
             
-            <label for="type-of-cuisine">Choose your preferred cuisine</label>
+            <label for="type-of-cuisine" class="cuisine-label">Choose your preferred cuisine</label>
             <select name="type-of-cuisine" id="type-of-cuisine">
+              <option selected="true" value disabled>Pick an option</option>
               <option value="african">African</option>
               <option value="american">American</option>
               <option value="british">British</option>
@@ -92,6 +95,7 @@
       </section>
     </main>
 
+  <script src="https://kit.fontawesome.com/15cca8e706.js" crossorigin="anonymous"></script>
     <script src="./scripts/app.js"></script>
   </body>
 
