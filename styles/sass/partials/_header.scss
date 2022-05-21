@@ -1,6 +1,9 @@
 header {
-    background-color: #EB9A9A;
-    // change this when variable partials are in place
+    // change this when variable partials are in place 
+    min-height: 100vh;
+    background-image: url('../assets/custom-wave.svg');
+    width: 100%;
+    background-repeat: repeat-x;
 
     img {
         border-radius: 50%;
