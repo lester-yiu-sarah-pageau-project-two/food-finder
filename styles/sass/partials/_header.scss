@@ -4,13 +4,20 @@ header {
     background-image: url('../assets/custom-wave.svg');
     width: 100%;
     background-repeat: repeat-x;
+    background-size: cover;
 
     img {
         border-radius: 50%;
+        height: auto;
+        width: 150px;
     }
 
-    ul {
-        display: flex;
-        justify-content: center;
+    nav {
+        padding-top: 15px;
+
+        ul {
+            display: flex;
+            justify-content: center;
+        }
     }
 }
