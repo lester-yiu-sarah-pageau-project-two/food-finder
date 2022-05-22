@@ -6,10 +6,66 @@ header {
     background-repeat: repeat-x;
     background-size: cover;
 
-    img {
-        border-radius: 50%;
-        height: auto;
-        width: 150px;
+    .logo-container{
+        position: relative;
+
+        .logo {
+            background-color: black;
+            width: 200px;
+            height: 120px;
+            transform: skew(15deg);
+            border-radius: 15px;
+        }
+
+        h1 {
+            font-weight: 700;
+            font-family: 'Lato', sans-serif;
+            font-style: italic;
+            color: white;
+            text-transform: uppercase;
+            position: absolute;
+            bottom: 50%;
+            left: 50%;
+            transform: translate(-50%, 50%);
+    
+            .logo-span-one {
+                display: flex;
+                position: relative;
+                justify-content: center;
+                width: 100%;
+                position: relative;
+                left: 12px;
+    
+                i {
+                    position: absolute;
+                    left: -30px;
+                    bottom: 10px;
+                    font-size: 1.6rem;
+                }
+            }
+    
+            .logo-span-two {
+                position: relative;
+                left: 22px;
+            }
+        }
+        
+        .logo-main {
+            position: relative;
+            z-index: 10;
+        }
+
+        .logo-shadow {
+            background-color: white;
+            width: 200px;
+            height: 120px;
+            transform: skew(15deg);
+            border-radius: 15px;
+            position: absolute;
+            top: 10px;
+            left: 15px;
+            border: 2px solid black;
+        }
     }
 
     nav {
@@ -18,6 +74,15 @@ header {
         ul {
             display: flex;
             justify-content: center;
+        }
+    }
+
+    .header-image-container {
+
+        img {
+            height: auto;
+            display: block;
+            width: 50%;
         }
     }
 }
