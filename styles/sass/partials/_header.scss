@@ -1,7 +1,7 @@
 header {
     // change this when variable partials are in place 
     min-height: 100vh;
-    background-color: $primary;
+    background: url('../assets/custom-wave.jpg');
     width: 100%;
     background-repeat: repeat-x;
     background-size: cover;
@@ -17,7 +17,8 @@ header {
             border-radius: 15px;
         }
 
-        h1 {
+        .logo-text {
+            font-size: 2rem;
             font-weight: 700;
             font-family: 'Lato', sans-serif;
             font-style: italic;

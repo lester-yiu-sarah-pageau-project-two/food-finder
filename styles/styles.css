@@ -291,7 +291,7 @@ button[type=submit] {
 
 header {
   min-height: 100vh;
-  background-color: #EB9A9A;
+  background: url("../assets/custom-wave.jpg");
   width: 100%;
   background-repeat: repeat-x;
   background-size: cover;
@@ -307,7 +307,8 @@ header .logo-container .logo {
           transform: skew(15deg);
   border-radius: 15px;
 }
-header .logo-container h1 {
+header .logo-container .logo-text {
+  font-size: 2rem;
   font-weight: 700;
   font-family: "Lato", sans-serif;
   font-style: italic;
@@ -319,7 +320,7 @@ header .logo-container h1 {
   -webkit-transform: translate(-50%, 50%);
           transform: translate(-50%, 50%);
 }
-header .logo-container h1 .logo-span-one {
+header .logo-container .logo-text .logo-span-one {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -331,13 +332,13 @@ header .logo-container h1 .logo-span-one {
   position: relative;
   left: 12px;
 }
-header .logo-container h1 .logo-span-one i {
+header .logo-container .logo-text .logo-span-one i {
   position: absolute;
   left: -30px;
   bottom: 10px;
   font-size: 1.6rem;
 }
-header .logo-container h1 .logo-span-two {
+header .logo-container .logo-text .logo-span-two {
   position: relative;
   left: 22px;
 }
