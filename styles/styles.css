@@ -879,3 +879,103 @@ header nav ul {
           align-items: center;
   width: 100%;
 }
+
+@media (max-width: 1145px) {
+  .wrapper {
+    width: 90%;
+  }
+}
+@media (max-width: 1050px) {
+  header .list-container {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  header .list-container .nav-anchor-container {
+    display: none;
+  }
+  header .list-container .slideout-menu .slideout-button {
+    font-size: 2.3rem;
+  }
+
+  .header-content .header-text {
+    width: 40%;
+  }
+  .header-content .header-image-container {
+    width: 60%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header-content .header-image-container img {
+    height: 92%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+
+  .background-image-container .background-image-one {
+    left: -22%;
+    top: 175px;
+  }
+  .background-image-container .background-image-two {
+    right: -28%;
+  }
+
+  .meal-filter .diet-choices {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .meal-filter .diet-choices .choice {
+    width: 40%;
+  }
+}
+@media (max-width: 785px) {
+  .header-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .header-content .header-text {
+    width: 100%;
+    margin: 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header-content .header-text h1 {
+    font-size: 2.7rem;
+    text-align: center;
+    margin-top: 40px;
+  }
+  .header-content .header-text h2 {
+    text-align: center;
+  }
+  .header-content .start-now {
+    width: 200px;
+    padding: 20px 20px;
+  }
+  .header-content .header-image-container {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    width: 100%;
+  }
+  .header-content .header-image-container img {
+    height: 350px;
+  }
+  .header-content h2 {
+    margin: 30px 0px;
+  }
+
+  .diet-form {
+    padding: 100px 0;
+  }
+
+  .background-image-container .background-image-one {
+    top: 17%;
+  }
+}

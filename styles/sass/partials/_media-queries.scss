@@ -1,0 +1,119 @@
+@media (max-width: 1145px) {
+    .wrapper {
+        width: 90%;
+    }
+}
+
+@media (max-width: 1050px) {
+
+    //header (nav)
+    header {
+        .list-container {
+            justify-content: flex-end;
+
+            .nav-anchor-container {
+                display: none;
+            }
+
+            .slideout-menu .slideout-button {
+                font-size: 2.3rem;
+            }
+        }
+    }
+
+    //header (content)
+
+    .header-content {
+        .header-text {
+            width: 40%;
+        }
+
+        .header-image-container {
+            width: 60%;
+            display: flex;
+            align-items: center;
+
+            img {
+                height: 92%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    //diet form section
+
+    .background-image-container {
+        .background-image-one {
+            left: -22%;
+            top: 175px;
+        }
+
+        .background-image-two {
+            right: -28%;
+        }
+    }
+
+    .meal-filter {
+
+        .diet-choices {
+            flex-wrap: wrap;
+
+            .choice {
+                width: 40%;
+            }
+        }
+    }
+}
+
+@media (max-width: 785px) {
+
+    //header (content)
+    .header-content {
+        flex-direction: column;
+
+        .header-text {
+            width: 100%;
+            margin: 0;
+            align-items: center;
+
+            h1 {
+                font-size: 2.7rem;
+                text-align: center;
+                margin-top: 40px;
+            }
+
+            h2 {
+                text-align: center;
+            }
+        }
+
+        .start-now {
+            width: 200px;
+            padding: 20px 20px;
+        }
+
+        .header-image-container {
+            order: -1;
+            width: 100%;
+
+            img {
+                height: 350px;
+            }
+        }
+
+        h2 {
+            margin: 30px 0px;
+        }
+    }
+
+    //diet form 
+    .diet-form {
+        padding: 100px 0;
+    }
+
+    .background-image-container {
+        .background-image-one {
+            top: 17%;
+        }
+    }
+}
