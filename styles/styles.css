@@ -389,7 +389,7 @@ header .list-container .nav-anchor-container {
 header .list-container .nav-anchor-container .nav-anchor {
   font-size: 1.3rem;
   font-weight: 800;
-  color: white;
+  color: black;
   font-family: "Poppins", sans-serif;
   text-transform: capitalize;
 }
@@ -404,7 +404,7 @@ header .list-container .slideout-menu {
 header .list-container .slideout-menu .slideout-button {
   border: none;
   background-color: transparent;
-  color: white;
+  color: black;
   font-size: 1.8rem;
 }
 header .logo-container {
