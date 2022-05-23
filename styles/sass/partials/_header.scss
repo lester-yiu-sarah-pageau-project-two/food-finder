@@ -6,13 +6,31 @@ header {
     background-repeat: repeat-x;
     background-size: cover;
 
-    .logo-container{
+    .list-container {
+        display: flex;
+        justify-content: space-between;
+        width: 55%;
+
+        .nav-anchor-container {
+            margin: auto 0;
+        
+            .nav-anchor {
+                font-size: 1.2rem;
+                font-weight: 700;
+                color: white;
+                font-family: $secondary-font;
+                text-transform: capitalize;
+            }
+        }
+    }
+
+    .logo-container {
         position: relative;
 
         .logo {
             background-color: $tertiary;
             width: 200px;
-            height: 120px;
+            height: 100px;
             transform: skew(15deg);
             border-radius: 15px;
         }
@@ -42,7 +60,7 @@ header {
             i {
                 position: absolute;
                 left: -30px;
-                bottom: 10px;
+                bottom: -12px;
             }
         }
         
@@ -54,7 +72,7 @@ header {
         .logo-shadow {
             background-color: $secondary;
             width: 200px;
-            height: 120px;
+            height: 100px;
             transform: skew(15deg);
             border-radius: 15px;
             position: absolute;
@@ -69,7 +87,7 @@ header {
 
         ul {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
         }
     }
 
@@ -88,6 +106,7 @@ header {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        margin-right: 40px;
     }
 
     .header-image-container {

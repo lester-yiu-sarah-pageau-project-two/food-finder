@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800;900&family=Lato:ital,wght@0,700;0,900;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800;900&family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap");
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -374,13 +374,32 @@ header {
   background-repeat: repeat-x;
   background-size: cover;
 }
+header .list-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 55%;
+}
+header .list-container .nav-anchor-container {
+  margin: auto 0;
+}
+header .list-container .nav-anchor-container .nav-anchor {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: white;
+  font-family: "Lato", sans-serif;
+  text-transform: capitalize;
+}
 header .logo-container {
   position: relative;
 }
 header .logo-container .logo {
   background-color: #000000;
   width: 200px;
-  height: 120px;
+  height: 100px;
   -webkit-transform: skew(15deg);
           transform: skew(15deg);
   border-radius: 15px;
@@ -413,7 +432,7 @@ header .logo-container .logo-text .logo-span-two {
 header .logo-container .logo-text i {
   position: absolute;
   left: -30px;
-  bottom: 10px;
+  bottom: -12px;
 }
 header .logo-container .logo-main {
   position: relative;
@@ -422,7 +441,7 @@ header .logo-container .logo-main {
 header .logo-container .logo-shadow {
   background-color: #FFFFFF;
   width: 200px;
-  height: 120px;
+  height: 100px;
   -webkit-transform: skew(15deg);
           transform: skew(15deg);
   border-radius: 15px;
@@ -438,9 +457,9 @@ header nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .header-content {
@@ -464,6 +483,7 @@ header nav ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-right: 40px;
 }
 .header-content .header-image-container {
   width: 50%;
@@ -531,7 +551,7 @@ header nav ul {
 .background-image-container .background-image-two {
   position: absolute;
   z-index: 10;
-  right: -15%;
+  right: -20%;
   bottom: 8%;
   width: 500px;
   height: auto;
@@ -577,6 +597,7 @@ header nav ul {
 .meal-filter .diet-choices .choice {
   padding: 20px 15px;
   margin: 10px 5px;
+  width: 200px;
   -webkit-box-shadow: 0 3px 10px rgba(240, 187, 183, 0.716);
           box-shadow: 0 3px 10px rgba(240, 187, 183, 0.716);
   border-radius: 5px;
@@ -649,7 +670,40 @@ header nav ul {
   width: 20px;
   border-radius: 2px;
   margin-top: -1.5px;
-  margin-left: -1px;
+  margin-left: -2px;
+}
+.meal-filter .search-bar {
+  width: 60%;
+  border: none;
+  -webkit-box-shadow: 0 3px 10px rgba(240, 187, 183, 0.716);
+          box-shadow: 0 3px 10px rgba(240, 187, 183, 0.716);
+  border-radius: 5px;
+  padding: 10px 0px 10px 10px;
+}
+.meal-filter .search-bar::-webkit-input-placeholder {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  color: #000000;
+}
+.meal-filter .search-bar::-moz-placeholder {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  color: #000000;
+}
+.meal-filter .search-bar:-ms-input-placeholder {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  color: #000000;
+}
+.meal-filter .search-bar::-ms-input-placeholder {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  color: #000000;
+}
+.meal-filter .search-bar::placeholder {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  color: #000000;
 }
 .meal-filter select {
   -webkit-appearance: none;
@@ -672,7 +726,7 @@ header nav ul {
 .meal-filter button[type=submit] {
   border: none;
   color: #000000;
-  margin-top: 30px;
+  margin-top: 50px;
   cursor: pointer;
   background-color: #FAE4E4;
   border-radius: 30px;

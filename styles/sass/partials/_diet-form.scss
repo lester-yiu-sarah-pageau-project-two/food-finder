@@ -40,7 +40,7 @@
     .background-image-two {
         position: absolute;
         z-index: 10;
-        right: -15%;
+        right: -20%;
         bottom: 8%;
         width: 500px;
         height: auto;
@@ -77,6 +77,7 @@
         .choice {
             padding: 20px 15px;
             margin: 10px 5px;
+            width: 200px;
             box-shadow: 0 3px 10px rgba(240, 187, 183, 0.716);
             border-radius: 5px;
             display: flex;
@@ -130,9 +131,23 @@
                     width: 20px;
                     border-radius: 2px;
                     margin-top: -1.5px;
-                    margin-left: -1px;
+                    margin-left: -2px;
                 }
             }
+        }
+    }
+
+    .search-bar {
+        width: 60%;
+        border: none;
+        box-shadow: 0 3px 10px rgba(240, 187, 183, 0.716);
+        border-radius: 5px;
+        padding: 10px 0px 10px 10px;
+
+        &::placeholder {
+            font-family: 'Lato', sans-serif;
+            font-weight: 400;
+            color: $tertiary;
         }
     }
 
@@ -155,7 +170,7 @@
     button[type="submit"] {
         border: none;
         color: $tertiary;
-        margin-top: 30px;
+        margin-top: 50px;
         cursor: pointer;
         background-color: $senary;
         border-radius: 30px;
