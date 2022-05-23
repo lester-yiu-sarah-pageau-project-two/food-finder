@@ -3,6 +3,22 @@ html {
     font-family: $base-font;
 }
 
+h1 {
+    font-family: $secondary-font;
+    font-weight: 900;
+    letter-spacing: 1px;
+    font-size: 3rem;
+}
+
+.header-text h2 {
+    font-family: $secondary-font;
+    font-weight: 900;
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+    color: $lighter-black;
+    font-style: italic;
+}
+
 p {
     font-size: 1.2rem;
 }
