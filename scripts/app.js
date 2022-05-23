@@ -57,7 +57,7 @@
 
 //     6. If the recipe is clicked (use an event listener), add a class of display block to a modal to change it from display:none, allowing it to pop up on the page (toggle classes).
 
-//     7. Handle the tab index on everything behind the modal, utilizing conditional statements to switch off tab index if the modal is open. (EXTRA)
+//     7. Handle the tab index on everything behind the modal, utilizing conditional statements to switch off tab index if the modal is open. (EXTRA), after a certain amount of time has passed, switch images on the image courasel
 
 // */
 

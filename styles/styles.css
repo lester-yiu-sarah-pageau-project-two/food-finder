@@ -278,7 +278,7 @@ legend,
 .cuisine-label {
   font-size: 1.8rem;
   line-height: 24px;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 label,
@@ -369,10 +369,36 @@ header nav ul {
       -ms-flex-pack: center;
           justify-content: center;
 }
-header .header-image-container img {
+
+.header-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 50px;
+}
+.header-content .header-text {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.header-content .header-image-container {
+  width: 50%;
+}
+.header-content .header-image-container img {
   height: auto;
   display: block;
-  width: 50%;
+  width: 100%;
+  border-radius: 15px;
+  -webkit-box-shadow: 25px 25px #FAE4E4;
+          box-shadow: 25px 25px #FAE4E4;
 }
 
 .diet-form {
@@ -396,9 +422,10 @@ header .header-image-container img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 4px solid #000000;
+  border: 2px solid #000000;
   padding: 75px;
   border-radius: 5px;
+  background-color: #FAF0EE;
 }
 .meal-filter fieldset {
   border: 0;
@@ -419,7 +446,7 @@ header .header-image-container img {
 .meal-filter .diet-choices .choice {
   padding: 20px 15px;
   margin: 10px 5px;
-  border: 3px solid #000000;
+  border: 1px solid #000000;
   border-radius: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -430,6 +457,7 @@ header .header-image-container img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background-color: #FFFFFF;
 }
 .meal-filter .diet-choices .choice label {
   cursor: pointer;
@@ -473,7 +501,7 @@ header .header-image-container img {
   background-color: #FFFFFF;
   padding: 10px 0px 10px 10px;
   cursor: pointer;
-  border: 3px solid #000000;
+  border: 1px solid #000000;
   border-radius: 5px;
   background-image: url("../assets/arrow-down.svg");
   background-repeat: no-repeat;
