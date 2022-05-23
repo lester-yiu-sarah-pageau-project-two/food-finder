@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800;900&family=Lato:ital,wght@0,700;0,900;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800;900&family=Lato:ital,wght@0,700;0,900;1,400;1,700;1,900&display=swap");
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -272,22 +272,33 @@ h2 {
 
 html {
   font-size: 125%;
-  font-family: "Inter", sans-serif;
+}
+
+body {
+  font-family: "Lato", sans-serif;
 }
 
 h1 {
-  font-family: "Lato", sans-serif;
   font-weight: 900;
   letter-spacing: 1px;
   font-size: 3rem;
 }
 
+h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-transform: capitalize;
+}
+
 .header-text h2 {
-  font-family: "Lato", sans-serif;
   font-weight: 900;
   letter-spacing: 1px;
   font-size: 1.5rem;
-  color: #242e33;
+  color: #1a2125;
+}
+
+.app-description {
+  font-weight: 400;
   font-style: italic;
 }
 
@@ -311,11 +322,15 @@ p {
   font-size: 1.2rem;
 }
 
+.diet-form {
+  font-family: "Lato", sans-serif;
+}
+
 legend,
 .cuisine-label {
   font-size: 1.8rem;
-  line-height: 24px;
-  font-weight: 600;
+  font-weight: 900;
+  color: #1a2125;
 }
 
 label,
@@ -323,7 +338,6 @@ button[type=submit] {
   font-size: 1.2rem;
   font-weight: 600;
   font-family: inherit;
-  line-height: 24px;
 }
 
 body {
@@ -435,7 +449,7 @@ header nav ul {
   margin-top: 50px;
 }
 .header-content h2 {
-  margin: 30px 0;
+  margin: 30px 0 60px 0;
 }
 .header-content .header-text {
   width: 50%;
@@ -475,11 +489,28 @@ header nav ul {
 .diet-form {
   padding: 60px 0px;
 }
-.diet-form::before {
-  content: "";
-  background-image: url("../assets/wave-3.svg");
-  display: block;
-  height: 3rem;
+.diet-form .top-form-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 35px;
+}
+.diet-form .top-form-title .sub-title {
+  text-align: center;
+  margin-bottom: 25px;
+}
+.diet-form .top-form-title .app-description {
+  width: 70%;
+  margin: 0;
+  text-align: center;
+  color: #1a2125;
 }
 
 .meal-filter {
@@ -493,7 +524,7 @@ header nav ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 2px solid #000000;
+  border: 3px solid #EB9A9A;
   padding: 75px;
   border-radius: 5px;
   background-color: #FAF0EE;
@@ -517,8 +548,27 @@ header nav ul {
 .meal-filter .diet-choices .choice {
   padding: 20px 15px;
   margin: 10px 5px;
-  border: 1px solid #000000;
+  border: 2px solid #EB9A9A;
   border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #FFFFFF;
+}
+.meal-filter .diet-choices .choice .choice-icon {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  background-color: rgba(240, 187, 183, 0.6);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -528,23 +578,32 @@ header nav ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #FFFFFF;
+  -webkit-box-shadow: 0 3px 10px rgba(240, 187, 183, 0.716);
+          box-shadow: 0 3px 10px rgba(240, 187, 183, 0.716);
 }
 .meal-filter .diet-choices .choice label {
   cursor: pointer;
+}
+.meal-filter .diet-choices .choice .choice-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .meal-filter .diet-choices .choice input[type=checkbox] {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  border: 1px solid #000000;
+  border: 2px solid #EB9A9A;
   height: 20px;
   width: 20px;
-  display: block;
-  border-radius: 2px;
   -webkit-box-ordinal-group: 0;
       -ms-flex-order: -1;
           order: -1;
+  display: block;
+  border-radius: 2px;
   margin-right: 10px;
   cursor: pointer;
   -ms-flex-negative: 0;
@@ -557,11 +616,12 @@ header nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border: 1px solid #000000;
+  border: 2px solid #EB9A9A;
   height: 20px;
   width: 20px;
   border-radius: 2px;
-  margin-top: -1px;
+  margin-top: -1.5px;
+  margin-left: -1px;
 }
 .meal-filter select {
   -webkit-appearance: none;
@@ -572,7 +632,7 @@ header nav ul {
   background-color: #FFFFFF;
   padding: 10px 0px 10px 10px;
   cursor: pointer;
-  border: 1px solid #000000;
+  border: 2px solid #EB9A9A;
   border-radius: 5px;
   background-image: url("../assets/arrow-down.svg");
   background-repeat: no-repeat;
@@ -581,14 +641,19 @@ header nav ul {
 }
 .meal-filter button[type=submit] {
   border: none;
-  background-color: #000000;
-  border-radius: 5px;
-  color: #FFFFFF;
-  padding: 10px 15px;
+  color: #000000;
   margin-top: 30px;
   cursor: pointer;
+  background-color: #FAE4E4;
+  border-radius: 30px;
+  display: block;
+  padding: 15px 10px;
+  width: 250px;
+  text-align: center;
+  -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
 .meal-filter button[type=submit] i {
-  color: #FFFFFF;
   margin-right: 15px;
+  color: #000000;
 }

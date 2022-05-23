@@ -1,21 +1,32 @@
 html {
     font-size: 125%;
-    font-family: $base-font;
+}
+
+body {
+    font-family: $secondary-font;
 }
 
 h1 {
-    font-family: $secondary-font;
     font-weight: 900;
     letter-spacing: 1px;
     font-size: 3rem;
 }
 
+h2 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-transform: capitalize;
+}
+
 .header-text h2 {
-    font-family: $secondary-font;
     font-weight: 900;
     letter-spacing: 1px;
     font-size: 1.5rem;
     color: $lighter-black;
+}
+
+.app-description {
+    font-weight: 400;
     font-style: italic;
 }
 
@@ -39,11 +50,15 @@ p {
     font-size: 1.2rem;
 }
 
+.diet-form {
+    font-family: $secondary-font;
+}
+
 legend,
 .cuisine-label {
     font-size: 1.8rem;
-    line-height: 24px;
-    font-weight: 600;
+    font-weight: 900;
+    color: $lighter-black;
 }
 
 label,
@@ -51,5 +66,4 @@ button[type="submit"] {
     font-size: 1.2rem;
     font-weight: 600;
     font-family: inherit;
-    line-height: 24px;
 }

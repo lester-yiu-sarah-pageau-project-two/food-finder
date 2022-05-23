@@ -1,11 +1,23 @@
 .diet-form {
     padding: 60px 0px;
 
-    &::before {
-        content: '';
-        background-image:url('../assets/wave-3.svg');
-        display: block;
-        height: 3rem;
+    .top-form-title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 35px;
+
+        .sub-title {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+    
+        .app-description {
+            width: 70%;
+            margin: 0;
+            text-align: center;
+            color: $lighter-black;
+        }
     }
 }
 
@@ -13,7 +25,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 2px solid $tertiary;
+    border: 3px solid $primary;
     padding: 75px;
     border-radius: 5px;
     background-color: $quinary;
@@ -36,27 +48,46 @@
         .choice {
             padding: 20px 15px;
             margin: 10px 5px;
-            border: 1px solid $tertiary;
+            border: 2px solid $primary;
             border-radius: 5px;
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: center;
             background-color: $secondary;
+
+            .choice-icon {
+                font-size: 2rem;
+                margin-bottom: 25px;
+                border-radius: 50%;
+                height: 100px;
+                width: 100px;
+                background-color:rgba(240, 187, 183, 0.6);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 3px 10px rgba(240, 187, 183, 0.716);
+            }
 
             label {
                 cursor: pointer;
             }
 
+            .choice-text {
+                display: flex;
+                align-items: center;
+            }
+
+
             input[type="checkbox"] {
                 appearance: none;
                 -webkit-appearance: none;
                 -moz-appearance: none;
-                border: 1px solid $tertiary;
+                border: 2px solid $primary;
                 height: 20px;
                 width: 20px;
+                order: -1;
                 display: block;
                 border-radius: 2px;
-                order: -1;
                 margin-right: 10px;
                 cursor: pointer;
                 flex-shrink: 0;
@@ -66,11 +97,12 @@
                     color: $secondary;
                     background-color: $tertiary;
                     display: flex;
-                    border: 1px solid $tertiary;
+                    border: 2px solid $primary;
                     height: 20px;
                     width: 20px;
                     border-radius: 2px;
-                    margin-top: -1px;
+                    margin-top: -1.5px;
+                    margin-left: -1px;
                 }
             }
         }
@@ -83,7 +115,7 @@
         background-color: $secondary;
         padding: 10px 0px 10px 10px;
         cursor: pointer;
-        border: 1px solid $tertiary;
+        border: 2px solid $primary;
         border-radius: 5px;
         background-image: url('../assets/arrow-down.svg');
         background-repeat: no-repeat;
@@ -93,16 +125,20 @@
 
     button[type="submit"] {
         border: none;
-        background-color: $tertiary;
-        border-radius: 5px;
-        color: $secondary;
-        padding: 10px 15px;
+        color: $tertiary;
         margin-top: 30px;
         cursor: pointer;
+        background-color: $senary;
+        border-radius: 30px;
+        display: block;
+        padding: 15px 10px;
+        width: 250px;
+        text-align: center;
+        box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 
         i {
-            color: $secondary;
             margin-right: 15px;
+            color: $tertiary;
         }
     }
 }
