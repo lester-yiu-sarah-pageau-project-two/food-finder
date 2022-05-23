@@ -9,17 +9,29 @@ header {
     .list-container {
         display: flex;
         justify-content: space-between;
-        width: 55%;
+        width: 54%;
 
         .nav-anchor-container {
             margin: auto 0;
         
             .nav-anchor {
-                font-size: 1.2rem;
-                font-weight: 700;
+                font-size: 1.3rem;
+                font-weight: 800;
                 color: white;
-                font-family: $secondary-font;
+                font-family: $tertiary-font;
                 text-transform: capitalize;
+            }
+        }
+        
+        .slideout-menu {
+            display: flex;
+            align-items: center;
+
+            .slideout-button {
+                    border: none;
+                    background-color: transparent;
+                    color: white;
+                    font-size: 1.8rem;
             }
         }
     }

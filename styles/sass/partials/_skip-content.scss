@@ -1,0 +1,15 @@
+.skip-main-content {
+    position: absolute;
+    left: -100%;
+    background: $quinary;
+    color: $tertiary;
+    font-weight: 700;
+    font-family: $secondary-font;
+    padding: 10px;
+    transition-duration: 0.2s;
+    transition-property: all;
+}
+
+.skip-main-content:focus-within {
+    left: 0;
+}
