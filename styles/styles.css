@@ -237,6 +237,10 @@ html {
   overflow: hidden;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .wrapper {
   max-width: 1200px;
   width: 75%;
@@ -260,7 +264,8 @@ body {
   background-color: white;
 }
 
-h1 {
+h1,
+h2 {
   padding: 0;
   margin: 0;
 }
@@ -286,6 +291,22 @@ h1 {
   font-style: italic;
 }
 
+.logo-text {
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: "Lato", sans-serif;
+  font-style: italic;
+}
+
+.logo-text i {
+  font-size: 1.6rem;
+}
+
+.start-now {
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
 p {
   font-size: 1.2rem;
 }
@@ -305,6 +326,32 @@ button[type=submit] {
   line-height: 24px;
 }
 
+body {
+  -webkit-animation: fadeInAnimation ease 2s;
+          animation: fadeInAnimation ease 2s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 header {
   min-height: 100vh;
   background: url("../assets/custom-wave.jpg");
@@ -324,10 +371,6 @@ header .logo-container .logo {
   border-radius: 15px;
 }
 header .logo-container .logo-text {
-  font-size: 2rem;
-  font-weight: 700;
-  font-family: "Lato", sans-serif;
-  font-style: italic;
   color: white;
   text-transform: uppercase;
   position: absolute;
@@ -348,15 +391,14 @@ header .logo-container .logo-text .logo-span-one {
   position: relative;
   left: 12px;
 }
-header .logo-container .logo-text .logo-span-one i {
-  position: absolute;
-  left: -30px;
-  bottom: 10px;
-  font-size: 1.6rem;
-}
 header .logo-container .logo-text .logo-span-two {
   position: relative;
   left: 22px;
+}
+header .logo-container .logo-text i {
+  position: absolute;
+  left: -30px;
+  bottom: 10px;
 }
 header .logo-container .logo-main {
   position: relative;
@@ -392,6 +434,9 @@ header nav ul {
   display: flex;
   margin-top: 50px;
 }
+.header-content h2 {
+  margin: 30px 0;
+}
 .header-content .header-text {
   width: 50%;
   display: -webkit-box;
@@ -416,9 +461,19 @@ header nav ul {
   -webkit-box-shadow: 25px 25px #FAE4E4;
           box-shadow: 25px 25px #FAE4E4;
 }
+.header-content .start-now {
+  background-color: #FAE4E4;
+  border-radius: 30px;
+  display: block;
+  padding: 15px 10px;
+  width: 150px;
+  text-align: center;
+  -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
 
 .diet-form {
-  padding: 75px 0px;
+  padding: 60px 0px;
 }
 .diet-form::before {
   content: "";
