@@ -851,6 +851,8 @@ header nav ul {
   border-radius: 4px;
   -o-object-fit: fill;
      object-fit: fill;
+  -webkit-box-shadow: 0 3px 10px rgba(240, 187, 183, 0.716);
+          box-shadow: 0 3px 10px rgba(240, 187, 183, 0.716);
 }
 .recipe-wrap .column .box .img-wrapper img {
   -o-object-fit: fill;
@@ -864,11 +866,9 @@ header nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   width: 100%;
 }
+
 .recipe-wrap .column .box .text-container .paragraph-container {
   display: -webkit-box;
   display: -ms-flexbox;
