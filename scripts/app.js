@@ -67,6 +67,7 @@ cookingApp.endpoint = `https://api.spoonacular.com/recipes/complexSearch`;
 
 cookingApp.recipeEndPoint = `https://api.spoonacular.com/recipes/analyze`;
 
+
 const formEl = document.querySelector('form');
 
 
@@ -74,34 +75,75 @@ const dairyChoice = document.querySelector(`input[id="dairy"]`); //checked
 
 const glutenChoice = document.querySelector(`input[id="gluten"]`);
 
-dairyChoice.addEventListener('click', () => {
-    if (dairyChoice.checked === true) {
-        cookingApp.dairyValue = dairyChoice.value;
-    } else {
-        cookingApp.dairyValue = '';
-    }
-});
+const vegetarianChoice = document.querySelector(`input[id="vegetarian-diet"]`);
 
-glutenChoice.addEventListener('click', () => {
-    if (glutenChoice.checked === true) {
-        cookingApp.glutenValue = glutenChoice.value;
-        console.log(cookingApp.glutenValue);
-    } else {
-        cookingApp.glutenValue = '';
-        console.log(cookingApp.glutenValue);
-    }
-});
+const veganChoice = document.querySelector(`input[id="vegan-diet"]`);
 
-formEl.addEventListener('submit', (e) => {
-    e.preventDefault();
 
-    cookingApp.vegetarianChoice = document.querySelector(`input[id="vegetarian-diet"]`);
 
-    cookingApp.veganChoice = document.querySelector(`input[id='vegan-diet']`);
 
-    cookingApp.cuisineChoice = document.querySelector(`select[name='type-of-cuisine']`); // .selected
 
-    cookingApp.ingredientChoice = document.querySelector(`input[type='text']`); // value
+cookingApp.placeEventListeners = function() {
+    dairyChoice.addEventListener('click', () => {
+        if (dairyChoice.checked === true) {
+            cookingApp.dairyValue = dairyChoice.value;
+        } else {
+            cookingApp.dairyValue = '';
+        }
+    });
+
+    glutenChoice.addEventListener('click', () => {
+        if (glutenChoice.checked === true) {
+            cookingApp.glutenValue = glutenChoice.value;
+            console.log(cookingApp.glutenValue);
+        } else {
+            cookingApp.glutenValue = '';
+            console.log(cookingApp.glutenValue);
+        }
+    });
+
+    vegetarianChoice.addEventListener('click', () => {
+        if (vegetarianChoice.checked === true) {
+            cookingApp.dietValue = vegetarianChoice.value;
+            const veganChoice = document.querySelector(`input[id='vegan-diet']`);
+            veganChoice.checked = false;
+        } else {
+            cookingApp.dietValue = '';
+        }
+    });
+
+    veganChoice.addEventListener('click', () => {
+        if (veganChoice.checked === true) {
+            cookingApp.dietValue = veganChoice.value;
+            const vegetarianChoice = document.querySelector(`input[id='vegetarian-diet']`);
+            vegetarianChoice.checked = false;
+        } else {
+            cookingApp.dietValue = '';
+        } 
+    });
+}
+
+ cookingApp.submissionForm = function() {
+
+    formEl.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        cookingApp.dairyChoice = document.querySelector(`input[id="dairy"]`)
+
+        cookingApp.vegetarianChoice = document.querySelector(`input[id="vegetarian-diet"]`);
+
+        cookingApp.veganChoice = document.querySelector(`input[id='vegan-diet']`);
+
+        cookingApp.cuisineChoice = document.querySelector(`select[name='type-of-cuisine']`); // .selected
+
+        cookingApp.ingredientChoice = document.querySelector(`input[type='text']`); // value
+
+        cookingApp.getInfo();
+    });
+
+ }
+
+
 
 cookingApp.getInfo = () => {
     // const userChoice = prompt('What food do you want?')
@@ -113,10 +155,10 @@ cookingApp.getInfo = () => {
         addRecipeInformation: true,
         instructionsRequired: true, //This is in analyzed instructions
         query: 'sandwich',
-        intolerances: `${cookingApp.dairyValue}, ${cookingApp.glutenValue}`
-        // diet: `${cookingApp.veganChoice}, ${cookingApp.vegetarianChoice}`,
-        // intolerances: `${cookingApp.dairyChoice}, ${cookingApp.glutenChoice}`
+        intolerances: `${cookingApp.dairyValue}, ${cookingApp.glutenValue}`,
+        diet: cookingApp.dietValue
     });
+
 
 
     fetch(spoonUrl)
@@ -128,9 +170,10 @@ cookingApp.getInfo = () => {
             });
     }
 
-    cookingApp.init = () => {
-        cookingApp.getInfo();
-    }
 
-    cookingApp.init();
-});
+cookingApp.init = () => {
+    cookingApp.placeEventListeners();
+    cookingApp.submissionForm();
+}
+
+cookingApp.init();

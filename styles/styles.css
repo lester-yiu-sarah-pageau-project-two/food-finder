@@ -884,12 +884,7 @@ header nav ul {
 }
 
 footer {
-  margin-top: 40px;
-  left: 0;
-  bottom: 0;
-  width: 100%;
   background-color: #FAE4E4;
-  text-align: center;
 }
 
 @media (max-width: 1145px) {
