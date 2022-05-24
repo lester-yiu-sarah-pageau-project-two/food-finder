@@ -300,8 +300,12 @@ h2 {
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 900;
+}
+
+.text-container p {
+  font-size: 1rem;
 }
 
 .paragraph-container p {
@@ -816,11 +820,10 @@ header nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 48%;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
   padding: 0px;
 }
 .recipe-wrap .column .box {
@@ -831,15 +834,16 @@ header nav ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-shadow: 0 3px 10px rgba(240, 187, 183, 0.716);
+          box-shadow: 0 3px 10px rgba(240, 187, 183, 0.716);
+  width: 48%;
+  border-radius: 4px;
+  margin: 20px 0;
+  background-color: #FAF0EE;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-shadow: 0 3px 10px rgba(240, 187, 183, 0.716);
-          box-shadow: 0 3px 10px rgba(240, 187, 183, 0.716);
-  border-radius: 4px;
-  width: 100%;
-  margin: 20px 0;
-  background-color: #FAF0EE;
+  padding: 40px 0;
 }
 .recipe-wrap .column .box .img-wrapper {
   display: -webkit-box;
@@ -849,27 +853,27 @@ header nav ul {
   -webkit-box-shadow: 0 3px 10px rgba(240, 187, 183, 0.716);
           box-shadow: 0 3px 10px rgba(240, 187, 183, 0.716);
   border-radius: 4px;
-  -o-object-fit: fill;
-     object-fit: fill;
-  -webkit-box-shadow: 0 3px 10px rgba(240, 187, 183, 0.716);
-          box-shadow: 0 3px 10px rgba(240, 187, 183, 0.716);
+  box-shadow: 0 3px 10px rgba(240, 187, 183, 0.716);
 }
 .recipe-wrap .column .box .img-wrapper img {
-  -o-object-fit: fill;
-     object-fit: fill;
   width: 100%;
+  border-radius: 5px;
 }
 .recipe-wrap .column .box .text-container {
   width: 75%;
 }
-.recipe-wrap .column .box .text-container .text-heading {
+.recipe-wrap .column .box .text-container h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
+  margin: 15px 0;
+  text-align: center;
 }
-
-.recipe-wrap .column .box .text-container .paragraph-container {
+.recipe-wrap .column .box .text-container p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -880,6 +884,7 @@ header nav ul {
 }
 
 footer {
+  margin-top: 40px;
   left: 0;
   bottom: 0;
   width: 100%;
