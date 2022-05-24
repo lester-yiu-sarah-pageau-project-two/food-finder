@@ -61,29 +61,47 @@ const cookingApp = {};
 
 */
 
-// cookingApp.apiKey = `b816c6f070174a9596e8c0889839e0da`;
+cookingApp.apiKey = `b816c6f070174a9596e8c0889839e0da`;
 
-// cookingApp.endpoint = `https://api.spoonacular.com/recipes/complexSearch`;
+cookingApp.endpoint = `https://api.spoonacular.com/recipes/complexSearch`;
 
-// cookingApp.recipeEndPoint = `https://api.spoonacular.com/recipes/analyze`;
+cookingApp.recipeEndPoint = `https://api.spoonacular.com/recipes/analyze`;
 
 const formEl = document.querySelector('form');
+
+
+const dairyChoice = document.querySelector(`input[id="dairy"]`); //checked
+
+const glutenChoice = document.querySelector(`input[id="gluten"]`);
+
+dairyChoice.addEventListener('click', () => {
+    if (dairyChoice.checked === true) {
+        cookingApp.dairyValue = dairyChoice.value;
+    } else {
+        cookingApp.dairyValue = '';
+    }
+});
+
+glutenChoice.addEventListener('click', () => {
+    if (glutenChoice.checked === true) {
+        cookingApp.glutenValue = glutenChoice.value;
+        console.log(cookingApp.glutenValue);
+    } else {
+        cookingApp.glutenValue = '';
+        console.log(cookingApp.glutenValue);
+    }
+});
 
 formEl.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    const dairyChoice = document.querySelector(`input[id="dairy"]`);
+    cookingApp.vegetarianChoice = document.querySelector(`input[id="vegetarian-diet"]`);
 
-    const glutenChoice = document.querySelector(`input[id="gluten"]`);
+    cookingApp.veganChoice = document.querySelector(`input[id='vegan-diet']`);
 
-    const vegetarianChoice = document.querySelector(`input[id='vegetarian-diet']`);
-    const veganChoice = document.querySelector(`input[id='vegan-diet']`);
+    cookingApp.cuisineChoice = document.querySelector(`select[name='type-of-cuisine']`); // .selected
 
-    const cuisineChoice = document.querySelector(`select[name='type-of-cuisine']`); // .selected
-
-    const ingredientChoice = document.querySelector(`input[type='text']`); // value
-    console.log(ingredientChoice);
-});
+    cookingApp.ingredientChoice = document.querySelector(`input[type='text']`); // value
 
 cookingApp.getInfo = () => {
     // const userChoice = prompt('What food do you want?')
@@ -95,8 +113,11 @@ cookingApp.getInfo = () => {
         addRecipeInformation: true,
         instructionsRequired: true, //This is in analyzed instructions
         query: 'sandwich',
-        diet: 'vegetarian'
+        intolerances: `${cookingApp.dairyValue}, ${cookingApp.glutenValue}`
+        // diet: `${cookingApp.veganChoice}, ${cookingApp.vegetarianChoice}`,
+        // intolerances: `${cookingApp.dairyChoice}, ${cookingApp.glutenChoice}`
     });
+
 
     fetch(spoonUrl)
         .then( (response) => {
@@ -105,10 +126,11 @@ cookingApp.getInfo = () => {
             .then ( (jsonData) => {
                 console.log(jsonData);
             });
-}
+    }
 
-cookingApp.init = () => {
-    cookingApp.getInfo();
-}
+    cookingApp.init = () => {
+        cookingApp.getInfo();
+    }
 
-cookingApp.init();
+    cookingApp.init();
+});
