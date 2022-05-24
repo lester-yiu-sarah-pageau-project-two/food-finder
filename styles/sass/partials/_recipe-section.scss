@@ -49,8 +49,10 @@
 
             .text-heading {
                 display: flex;
-                align-items: center;
                 width: 100%;
+                h3 {
+                    text-align: center;
+                }
             }
 
             .paragraph-container {

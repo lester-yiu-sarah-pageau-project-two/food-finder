@@ -878,10 +878,10 @@ header nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   width: 100%;
+}
+.recipe-wrap .column .box .text-heading h3 {
+  text-align: center;
 }
 .recipe-wrap .column .box .paragraph-container {
   display: -webkit-box;
