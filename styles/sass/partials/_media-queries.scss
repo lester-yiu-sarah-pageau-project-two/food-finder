@@ -117,3 +117,72 @@
         }
     }
 }
+
+@media (max-width: 538px) {
+    .search-bar::placeholder {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    //header section (nav)
+
+    header {
+        .logo-container {
+        
+            .logo-text {
+                font-size: 1.7rem;
+            }
+
+            .logo,
+            .logo-shadow {
+                height: 75px;
+            }
+        }
+    }
+
+    //header section (content)
+    .header-content {
+        .header-text {
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+            }
+        }
+    }
+
+    //diet form section
+    
+    .meal-filter {
+        .diet-choices {
+            flex-direction: column;
+
+            .choice {
+                width: 85%;
+                margin: 15px auto;
+
+                .choice-icon {
+                    height: 75px;
+                    width: 75px;
+                    font-size: 1.5rem;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+
+    .background-image-container {
+        .background-image-one {
+            left: -40%;
+            top: 18%;
+        }
+
+        .background-image-two {
+            right: -28%;
+        }
+    }
+}

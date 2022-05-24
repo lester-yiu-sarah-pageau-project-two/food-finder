@@ -271,6 +271,14 @@ h2 {
   margin: 0;
 }
 
+h3 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
 html {
   font-size: 125%;
 }
@@ -594,7 +602,7 @@ header nav ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 75px;
+  padding: 75px 0;
   border-radius: 5px;
   background-color: #FAF0EE;
   -webkit-box-shadow: 0 3px 10px rgba(240, 187, 183, 0.716);
@@ -609,6 +617,7 @@ header nav ul {
 .meal-filter legend,
 .meal-filter .cuisine-label {
   margin: 30px auto;
+  text-align: center;
 }
 .meal-filter .diet-choices {
   width: 100%;
@@ -880,6 +889,15 @@ header nav ul {
   width: 100%;
 }
 
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #FAE4E4;
+  text-align: center;
+}
+
 @media (max-width: 1145px) {
   .wrapper {
     width: 90%;
@@ -977,5 +995,63 @@ header nav ul {
 
   .background-image-container .background-image-one {
     top: 17%;
+  }
+}
+@media (max-width: 538px) {
+  .search-bar::-webkit-input-placeholder {
+    font-size: 0.8rem;
+  }
+  .search-bar::-moz-placeholder {
+    font-size: 0.8rem;
+  }
+  .search-bar:-ms-input-placeholder {
+    font-size: 0.8rem;
+  }
+  .search-bar::-ms-input-placeholder {
+    font-size: 0.8rem;
+  }
+  .search-bar::placeholder {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 480px) {
+  header .logo-container .logo-text {
+    font-size: 1.7rem;
+  }
+  header .logo-container .logo,
+header .logo-container .logo-shadow {
+    height: 75px;
+  }
+
+  .header-content .header-text h1 {
+    font-size: 2.2rem;
+  }
+  .header-content .header-text h2 {
+    font-size: 1.3rem;
+  }
+
+  .meal-filter .diet-choices {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .meal-filter .diet-choices .choice {
+    width: 85%;
+    margin: 15px auto;
+  }
+  .meal-filter .diet-choices .choice .choice-icon {
+    height: 75px;
+    width: 75px;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+
+  .background-image-container .background-image-one {
+    left: -40%;
+    top: 18%;
+  }
+  .background-image-container .background-image-two {
+    right: -28%;
   }
 }
