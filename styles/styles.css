@@ -302,6 +302,7 @@ h2 {
 h3 {
   font-size: 1.4rem;
   font-weight: 600;
+  text-align: center;
 }
 
 .text-container p {
@@ -895,14 +896,8 @@ header nav ul {
   width: 75%;
 }
 .recipe-wrap .column .box .text-container h3 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   width: 100%;
-  margin: 15px 0;
+  margin: 15px auto;
   text-align: center;
 }
 .recipe-wrap .column .box .text-container p {
