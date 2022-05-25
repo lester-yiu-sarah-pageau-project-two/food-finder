@@ -799,11 +799,30 @@ header nav ul {
 
 .recipe-reccos {
   padding-bottom: 100px;
+  position: relative;
 }
-.recipe-reccos .recipe-heading-container {
+.recipe-reccos .background-image-three {
+  width: 380px;
+  bottom: 165px;
+  left: -10%;
+  position: absolute;
+  -webkit-transform: rotate(165deg);
+          transform: rotate(165deg);
+}
+.recipe-reccos .background-image-four {
+  width: 320px;
+  top: 8%;
+  right: -8%;
+  position: absolute;
+}
+.recipe-reccos .recipe-reccos-content {
+  position: relative;
+  z-index: 20;
+}
+.recipe-reccos .recipe-reccos-content .recipe-heading-container {
   margin-bottom: 25px;
 }
-.recipe-reccos .recipe-heading-container h2 {
+.recipe-reccos .recipe-reccos-content .recipe-heading-container h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -813,7 +832,7 @@ header nav ul {
   padding-bottom: 25px;
   text-align: center;
 }
-.recipe-reccos .recipe-heading-container p {
+.recipe-reccos .recipe-reccos-content .recipe-heading-container p {
   text-align: center;
   text-transform: capitalize;
 }
