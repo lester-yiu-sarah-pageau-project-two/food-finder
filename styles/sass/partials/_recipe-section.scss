@@ -1,21 +1,42 @@
 .recipe-reccos {
     padding-bottom: 100px;
+    position: relative;
 
-    .recipe-heading-container {
-        margin-bottom: 25px;
+    .background-image-three {
+        width: 380px;
+        bottom: 165px;
+        left: -10%;
+        position: absolute;
+        transform:rotate(165deg);
+    }
 
-        h2 {
-                display: flex;
-                justify-content: center;
-                padding-bottom: 25px;
-                text-align: center;
+    .background-image-four {
+        width: 320px;
+        top: 8%;
+        right: -8%;
+        position: absolute;
+    }
+
+    .recipe-reccos-content {
+        position: relative;
+        z-index: 20;
+
+        .recipe-heading-container {
+                margin-bottom: 25px;
+        
+                h2 {
+                    display: flex;
+                    justify-content: center;
+                    padding-bottom: 25px;
+                    text-align: center;
+                }
+        
+                p {
+                    text-align: center;
+                    text-transform: capitalize;
+                }
+        
         }
-    
-        p {
-            text-align: center;
-            text-transform: capitalize;
-        }
-
     }
 }
 
@@ -59,10 +80,8 @@
                 width: 75%; 
 
                 h3 {
-                        display: flex;
-                        align-items: center;
                         width: 100%;
-                        margin: 15px 0;
+                        margin: 15px auto;
                         text-align: center;
                 }      
                 p{

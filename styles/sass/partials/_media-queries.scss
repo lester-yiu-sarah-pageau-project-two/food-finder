@@ -153,9 +153,21 @@
         width: 48%;
     }
 
+    .background-image-container {
+        .background-image-three {
+            left: -26%;
+            top: 40%;
+        }
+
+        .background-image-four {
+            top: 18%;
+            right: -28%;
+        }
+    }
+
 }
 
-@media (max-width: 480px) {
+@media (max-width: 515px) {
 
 //header section (nav)
 
@@ -218,7 +230,7 @@
         }
 
         .background-image-two {
-            right: -28%;
+            right: -70%;
         }
     }
 
@@ -226,5 +238,16 @@
 
     .recipe-wrap .column .box {
         width: 100%;
+    }
+
+    .recipe-reccos {
+        .background-image-three {
+            left: -45%;
+        }
+
+        .background-image-four {
+            top: 12%;
+            right: -45%;
+        }
     }
 }
