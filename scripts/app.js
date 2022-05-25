@@ -59,6 +59,8 @@ const cookingApp = {};
 
     7. Handle the tab index on everything behind the modal, utilizing conditional statements to switch off tab index if the modal is open. (EXTRA), after a certain amount of time has passed, switch images on the image courasel
 
+    8. Add a next page button for more recipe results
+
 */
 
 cookingApp.apiKey = `b816c6f070174a9596e8c0889839e0da`;
@@ -67,9 +69,7 @@ cookingApp.endpoint = `https://api.spoonacular.com/recipes/complexSearch`;
 
 cookingApp.recipeEndPoint = `https://api.spoonacular.com/recipes/analyze`;
 
-
 const formEl = document.querySelector('form');
-
 
 const dairyChoice = document.querySelector(`input[id="dairy"]`); //checked
 
@@ -79,9 +79,7 @@ const vegetarianChoice = document.querySelector(`input[id="vegetarian-diet"]`);
 
 const veganChoice = document.querySelector(`input[id="vegan-diet"]`);
 
-
-
-
+const ulEl = document.querySelector('ul.column');
 
 cookingApp.placeEventListeners = function() {
     dairyChoice.addEventListener('click', () => {
@@ -123,7 +121,7 @@ cookingApp.placeEventListeners = function() {
     });
 }
 
- cookingApp.submissionForm = function() {
+cookingApp.submissionForm = function() {
 
     formEl.addEventListener('submit', (e) => {
         e.preventDefault();
@@ -141,9 +139,7 @@ cookingApp.placeEventListeners = function() {
         cookingApp.getInfo();
     });
 
- }
-
-
+}
 
 cookingApp.getInfo = () => {
     // const userChoice = prompt('What food do you want?')
@@ -154,9 +150,10 @@ cookingApp.getInfo = () => {
         apiKey: cookingApp.apiKey,
         addRecipeInformation: true,
         instructionsRequired: true, //This is in analyzed instructions
-        query: 'sandwich',
+        query: cookingApp.ingredientChoice.value,
         intolerances: `${cookingApp.dairyValue}, ${cookingApp.glutenValue}`,
-        diet: cookingApp.dietValue
+        diet: cookingApp.dietValue,
+        cuisine: cookingApp.cuisineChoice.value
     });
 
 
@@ -166,10 +163,54 @@ cookingApp.getInfo = () => {
             return response.json();
         })
             .then ( (jsonData) => {
-                console.log(jsonData);
+                ulEl.innerHTML = '';
+                jsonData.results.forEach( (item) => {
+                    cookingApp.appendItems(item);
+                })
             });
     }
 
+cookingApp.appendItems = (argument) => {
+
+    const newLiEl = document.createElement('li');
+
+    newLiEl.classList.add('box');
+
+    const newImageContEl = document.createElement('div');
+
+    newImageContEl.classList.add('img-wrapper');
+
+    newLiEl.appendChild(newImageContEl);
+
+    const newTextContEl = document.createElement('div');
+
+    newTextContEl.classList.add('text-container');
+
+    newLiEl.appendChild(newTextContEl);
+
+    console.log(newLiEl);
+
+    const newImageEl = document.createElement('img');
+
+    newImageEl.src = `${argument.image}`;
+
+    newImageEl.alt = `${argument.title}`;
+
+    newImageContEl.appendChild(newImageEl);
+
+    const newHeadingEl = document.createElement('h3');
+
+    newHeadingEl.innerText = `${argument.title}`;
+
+    newTextContEl.appendChild(newHeadingEl);
+
+    cookingApp.displayItems(newLiEl);
+}
+
+cookingApp.displayItems = (item) => {
+
+    ulEl.appendChild(item);
+}
 
 cookingApp.init = () => {
     cookingApp.placeEventListeners();
