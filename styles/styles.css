@@ -1041,7 +1041,7 @@ header .logo-container .logo-shadow {
     width: 48%;
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 515px) {
   header .logo-container .logo-text {
     font-size: 1.1rem;
   }
