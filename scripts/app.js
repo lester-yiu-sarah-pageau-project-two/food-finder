@@ -59,6 +59,8 @@ const cookingApp = {};
 
     7. Handle the tab index on everything behind the modal, utilizing conditional statements to switch off tab index if the modal is open. (EXTRA), after a certain amount of time has passed, switch images on the image courasel
 
+    8. Add a next page button for more recipe results
+
 */
 
 cookingApp.apiKey = `b816c6f070174a9596e8c0889839e0da`;
@@ -69,39 +71,75 @@ cookingApp.recipeEndPoint = `https://api.spoonacular.com/recipes/analyze`;
 
 const formEl = document.querySelector('form');
 
-
 const dairyChoice = document.querySelector(`input[id="dairy"]`); //checked
 
 const glutenChoice = document.querySelector(`input[id="gluten"]`);
 
-dairyChoice.addEventListener('click', () => {
-    if (dairyChoice.checked === true) {
-        cookingApp.dairyValue = dairyChoice.value;
-    } else {
-        cookingApp.dairyValue = '';
-    }
-});
+const vegetarianChoice = document.querySelector(`input[id="vegetarian-diet"]`);
 
-glutenChoice.addEventListener('click', () => {
-    if (glutenChoice.checked === true) {
-        cookingApp.glutenValue = glutenChoice.value;
-        console.log(cookingApp.glutenValue);
-    } else {
-        cookingApp.glutenValue = '';
-        console.log(cookingApp.glutenValue);
-    }
-});
+const veganChoice = document.querySelector(`input[id="vegan-diet"]`);
 
-formEl.addEventListener('submit', (e) => {
-    e.preventDefault();
+const ulEl = document.querySelector('ul.column');
 
-    cookingApp.vegetarianChoice = document.querySelector(`input[id="vegetarian-diet"]`);
+cookingApp.placeEventListeners = function() {
+    dairyChoice.addEventListener('click', () => {
+        if (dairyChoice.checked === true) {
+            cookingApp.dairyValue = dairyChoice.value;
+        } else {
+            cookingApp.dairyValue = '';
+        }
+    });
 
-    cookingApp.veganChoice = document.querySelector(`input[id='vegan-diet']`);
+    glutenChoice.addEventListener('click', () => {
+        if (glutenChoice.checked === true) {
+            cookingApp.glutenValue = glutenChoice.value;
+            console.log(cookingApp.glutenValue);
+        } else {
+            cookingApp.glutenValue = '';
+            console.log(cookingApp.glutenValue);
+        }
+    });
 
-    cookingApp.cuisineChoice = document.querySelector(`select[name='type-of-cuisine']`); // .selected
+    vegetarianChoice.addEventListener('click', () => {
+        if (vegetarianChoice.checked === true) {
+            cookingApp.dietValue = vegetarianChoice.value;
+            const veganChoice = document.querySelector(`input[id='vegan-diet']`);
+            veganChoice.checked = false;
+        } else {
+            cookingApp.dietValue = '';
+        }
+    });
 
-    cookingApp.ingredientChoice = document.querySelector(`input[type='text']`); // value
+    veganChoice.addEventListener('click', () => {
+        if (veganChoice.checked === true) {
+            cookingApp.dietValue = veganChoice.value;
+            const vegetarianChoice = document.querySelector(`input[id='vegetarian-diet']`);
+            vegetarianChoice.checked = false;
+        } else {
+            cookingApp.dietValue = '';
+        } 
+    });
+}
+
+cookingApp.submissionForm = function() {
+
+    formEl.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        cookingApp.dairyChoice = document.querySelector(`input[id="dairy"]`)
+
+        cookingApp.vegetarianChoice = document.querySelector(`input[id="vegetarian-diet"]`);
+
+        cookingApp.veganChoice = document.querySelector(`input[id='vegan-diet']`);
+
+        cookingApp.cuisineChoice = document.querySelector(`select[name='type-of-cuisine']`); // .selected
+
+        cookingApp.ingredientChoice = document.querySelector(`input[type='text']`); // value
+
+        cookingApp.getInfo();
+    });
+
+}
 
 cookingApp.getInfo = () => {
     // const userChoice = prompt('What food do you want?')
@@ -112,11 +150,12 @@ cookingApp.getInfo = () => {
         apiKey: cookingApp.apiKey,
         addRecipeInformation: true,
         instructionsRequired: true, //This is in analyzed instructions
-        query: 'sandwich',
-        intolerances: `${cookingApp.dairyValue}, ${cookingApp.glutenValue}`
-        // diet: `${cookingApp.veganChoice}, ${cookingApp.vegetarianChoice}`,
-        // intolerances: `${cookingApp.dairyChoice}, ${cookingApp.glutenChoice}`
+        query: cookingApp.ingredientChoice.value,
+        intolerances: `${cookingApp.dairyValue}, ${cookingApp.glutenValue}`,
+        diet: cookingApp.dietValue,
+        cuisine: cookingApp.cuisineChoice.value
     });
+
 
 
     fetch(spoonUrl)
@@ -124,13 +163,58 @@ cookingApp.getInfo = () => {
             return response.json();
         })
             .then ( (jsonData) => {
-                console.log(jsonData);
+                ulEl.innerHTML = '';
+                jsonData.results.forEach( (item) => {
+                    cookingApp.appendItems(item);
+                })
             });
     }
 
-    cookingApp.init = () => {
-        cookingApp.getInfo();
-    }
+cookingApp.appendItems = (argument) => {
 
-    cookingApp.init();
-});
+    const newLiEl = document.createElement('li');
+
+    newLiEl.classList.add('box');
+
+    const newImageContEl = document.createElement('div');
+
+    newImageContEl.classList.add('img-wrapper');
+
+    newLiEl.appendChild(newImageContEl);
+
+    const newTextContEl = document.createElement('div');
+
+    newTextContEl.classList.add('text-container');
+
+    newLiEl.appendChild(newTextContEl);
+
+    console.log(newLiEl);
+
+    const newImageEl = document.createElement('img');
+
+    newImageEl.src = `${argument.image}`;
+
+    newImageEl.alt = `${argument.title}`;
+
+    newImageContEl.appendChild(newImageEl);
+
+    const newHeadingEl = document.createElement('h3');
+
+    newHeadingEl.innerText = `${argument.title}`;
+
+    newTextContEl.appendChild(newHeadingEl);
+
+    cookingApp.displayItems(newLiEl);
+}
+
+cookingApp.displayItems = (item) => {
+
+    ulEl.appendChild(item);
+}
+
+cookingApp.init = () => {
+    cookingApp.placeEventListeners();
+    cookingApp.submissionForm();
+}
+
+cookingApp.init();

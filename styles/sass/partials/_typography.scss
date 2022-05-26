@@ -19,8 +19,9 @@ h2 {
 }
 
 h3 {
-    font-size: 1.5rem;
-    font-weight: 900;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-align: center;
 }
 
 .text-container p {
@@ -80,4 +81,12 @@ button[type="submit"] {
     font-size: 1.2rem;
     font-weight: 600;
     font-family: inherit;
+}
+
+.footer h3{
+	font-family: 'Inter', sans-serif;
+	font-size: 30px;
+	font-weight: 100;
+	margin-top:70px;
+	margin-left:40px;
 }
