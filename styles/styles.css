@@ -1011,6 +1011,10 @@ header nav ul {
   margin-right: 10px;
 }
 
+.slidemenu-nav-open {
+  display: block;
+}
+
 @media (max-width: 1145px) {
   .wrapper {
     width: 90%;
