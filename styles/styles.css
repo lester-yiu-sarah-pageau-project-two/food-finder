@@ -948,6 +948,24 @@ header nav ul {
   width: 100%;
 }
 
+.nothing-yet {
+  width: 100%;
+  -webkit-box-shadow: 0 3px 10px rgba(240, 187, 183, 0.716);
+          box-shadow: 0 3px 10px rgba(240, 187, 183, 0.716);
+  background-color: #FAF0EE;
+  border-radius: 5px;
+  padding: 50px 100px;
+  margin-top: 35px;
+}
+.nothing-yet h3 {
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+.nothing-yet p {
+  margin-top: 50px;
+  font-style: italic;
+}
+
 .footer {
   bottom: 0;
   left: 0;

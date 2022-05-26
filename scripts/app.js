@@ -87,6 +87,8 @@ const exitMenuEl = document.querySelector('.close-menu-button');
 
 const slideMenu = document.querySelector('.slidemenu-nav');
 
+const nothingYetEl = document.querySelector('.nothing-yet');
+
 cookingApp.openMenu = function () {
     openMenuEl.addEventListener('click', function() {
         slideMenu.classList.toggle("slidemenu-nav-closed");
@@ -157,6 +159,8 @@ cookingApp.submissionForm = function() {
 
     formEl.addEventListener('submit', (e) => {
         e.preventDefault();
+
+        nothingYetEl.remove();
 
         cookingApp.dairyChoice = document.querySelector(`input[id="dairy"]`)
 
