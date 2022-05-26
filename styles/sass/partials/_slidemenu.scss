@@ -1,0 +1,48 @@
+.slidemenu-nav {
+    height: 100vh;
+    position: fixed;
+    z-index: 30;
+    width: 50%;
+    background-color: $primary;
+
+    .close-menu-button {
+        position: absolute;
+        color: white;
+        font-size: 2.4rem;
+        right: 25px;
+        top: 25px;
+        background-color: transparent;
+        border: none;
+    }
+
+    ul {
+        height: 100%;
+        width: 100%;
+        padding-top: 100px;
+        padding-left: 50px;
+    }
+
+    li {
+        margin-bottom: 60px;
+    }
+
+    a {
+        font-family: $tertiary-font;
+        font-size: 1.7rem;
+        color: white;
+        font-weight: 800;
+        text-transform: capitalize;
+
+        .slidemenu-icon {
+            margin-right: 10px;
+        }
+    }
+}
+
+.slidemenu-nav-open {
+    display: block;
+}
+
+.slidemenu-nav-closed {
+    display: none;
+}

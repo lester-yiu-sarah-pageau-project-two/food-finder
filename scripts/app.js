@@ -81,6 +81,40 @@ const veganChoice = document.querySelector(`input[id="vegan-diet"]`);
 
 const ulEl = document.querySelector('ul.column');
 
+const openMenuEl = document.querySelector('.slideout-button');
+
+const exitMenuEl = document.querySelector('.close-menu-button');
+
+const slideMenu = document.querySelector('.slidemenu-nav');
+
+cookingApp.openMenu = function () {
+    openMenuEl.addEventListener('click', function() {
+        slideMenu.classList.toggle("slidemenu-nav-closed");
+        slideMenu.classList.toggle("slidemenu-nav-open");
+    });
+}
+
+cookingApp.closeMenu = function () {
+    exitMenuEl.addEventListener('click', function() {
+        slideMenu.classList.toggle("slidemenu-nav-closed");
+        slideMenu.classList.toggle("slidemenu-nav-open");
+    })
+}
+
+cookingApp.slideMenu = function () {
+
+    cookingApp.openMenu();
+
+    cookingApp.closeMenu();
+
+    slideMenu.addEventListener('click', function(e) {
+        if (e.target.localName === "a") {
+            slideMenu.classList.toggle("slidemenu-nav-closed");
+            slideMenu.classList.toggle("slidemenu-nav-open");
+        }
+    })
+}
+
 cookingApp.placeEventListeners = function() {
     dairyChoice.addEventListener('click', () => {
         if (dairyChoice.checked === true) {
@@ -93,10 +127,8 @@ cookingApp.placeEventListeners = function() {
     glutenChoice.addEventListener('click', () => {
         if (glutenChoice.checked === true) {
             cookingApp.glutenValue = glutenChoice.value;
-            console.log(cookingApp.glutenValue);
         } else {
             cookingApp.glutenValue = '';
-            console.log(cookingApp.glutenValue);
         }
     });
 
@@ -156,8 +188,6 @@ cookingApp.getInfo = () => {
         cuisine: cookingApp.cuisineChoice.value
     });
 
-
-
     fetch(spoonUrl)
         .then( (response) => {
             return response.json();
@@ -188,8 +218,6 @@ cookingApp.appendItems = (argument) => {
 
     newLiEl.appendChild(newTextContEl);
 
-    console.log(newLiEl);
-
     const newImageEl = document.createElement('img');
 
     newImageEl.src = `${argument.image}`;
@@ -215,6 +243,7 @@ cookingApp.displayItems = (item) => {
 cookingApp.init = () => {
     cookingApp.placeEventListeners();
     cookingApp.submissionForm();
+    cookingApp.slideMenu();
 }
 
 cookingApp.init();
