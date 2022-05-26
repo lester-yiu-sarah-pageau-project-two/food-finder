@@ -202,9 +202,19 @@ cookingApp.getInfo = () => {
 
 cookingApp.appendItems = (argument) => {
 
+    const newAnchorEl = document.createElement('a');
+
+    newAnchorEl.href = argument.sourceUrl;
+
+    newAnchorEl.target = '_blank';
+
+    newAnchorEl.rel = 'noopener';
+
     const newLiEl = document.createElement('li');
 
     newLiEl.classList.add('box');
+
+    newAnchorEl.appendChild(newLiEl);
 
     const newImageContEl = document.createElement('div');
 
@@ -232,7 +242,7 @@ cookingApp.appendItems = (argument) => {
 
     newTextContEl.appendChild(newHeadingEl);
 
-    cookingApp.displayItems(newLiEl);
+    cookingApp.displayItems(newAnchorEl);
 }
 
 cookingApp.displayItems = (item) => {

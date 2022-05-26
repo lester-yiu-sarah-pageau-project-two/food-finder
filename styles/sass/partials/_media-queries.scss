@@ -75,6 +75,13 @@
     }
 }
 
+@media (max-width: 940px) {
+    //recipe section
+    .recipe-wrap .column a {
+        width: 43%;
+    }
+}
+
 @media (max-width: 785px) {
 
     //header section (nav)
@@ -148,10 +155,6 @@
     }
 
     //recipe section
-
-    .recipe-wrap .column .box {
-        width: 48%;
-    }
 
     .background-image-container {
         .background-image-three {
@@ -236,7 +239,7 @@
 
     //recipe section
 
-    .recipe-wrap .column .box {
+    .recipe-wrap .column a {
         width: 100%;
     }
 

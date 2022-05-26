@@ -47,21 +47,24 @@
 
     .column {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         width: 100%;
         padding: 0px;
         flex-wrap: wrap;
 
+        a {
+            box-shadow: 0 3px 10px rgba(240, 187, 183, 0.716);
+            width: 31%;
+            background-color: $quinary;
+            border-radius: 4px;
+            padding: 40px 0;
+            margin: 20px 0;
+        }
+
         .box {
             display: flex;
             flex-direction: column;
-            box-shadow: 0 3px 10px rgba(240, 187, 183, 0.716);
-            width: 31%;
-            border-radius: 4px;
-            margin: 20px 0;
-            background-color: $quinary;
             align-items: center;
-            padding: 40px 0;
 
             .img-wrapper {
                 display: flex;
