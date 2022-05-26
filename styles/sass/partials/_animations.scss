@@ -4,12 +4,30 @@ body {
     animation-fill-mode: forwards;
 }
 
+.slidemenu-nav-open {
+    animation: slideInAnimation ease 0.3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
 @keyframes fadeInAnimation {
     0% {
         opacity: 0;
     }
 
     100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInAnimation {
+    0% {
+        width: 0%;
+        opacity: 0;
+    }
+
+    100% {
+        width: 50%;
         opacity: 1;
     }
 }

@@ -1,17 +1,18 @@
 .slidemenu-nav {
-    display: none;
     height: 100vh;
     position: fixed;
     z-index: 30;
     width: 50%;
     background-color: $primary;
 
-    .slidemenu-exit {
+    .close-menu-button {
         position: absolute;
         color: white;
         font-size: 2.4rem;
         right: 25px;
         top: 25px;
+        background-color: transparent;
+        border: none;
     }
 
     ul {
@@ -40,4 +41,8 @@
 
 .slidemenu-nav-open {
     display: block;
+}
+
+.slidemenu-nav-closed {
+    display: none;
 }
