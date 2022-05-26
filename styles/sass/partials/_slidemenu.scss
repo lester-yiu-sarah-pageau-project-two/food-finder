@@ -1,0 +1,39 @@
+.slidemenu-nav {
+    display: none;
+    height: 100vh;
+    position: fixed;
+    z-index: 30;
+    width: 50%;
+    background-color: $primary;
+
+    .slidemenu-exit {
+        position: absolute;
+        color: white;
+        font-size: 2.4rem;
+        right: 25px;
+        top: 25px;
+    }
+
+    ul {
+        height: 100%;
+        width: 100%;
+        padding-top: 100px;
+        padding-left: 50px;
+    }
+
+    li {
+        margin-bottom: 60px;
+    }
+
+    a {
+        font-family: $tertiary-font;
+        font-size: 1.7rem;
+        color: white;
+        font-weight: 800;
+        text-transform: capitalize;
+
+        .slidemenu-icon {
+            margin-right: 10px;
+        }
+    }
+}

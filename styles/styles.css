@@ -892,6 +892,41 @@ footer {
   text-align: center;
 }
 
+.slidemenu-nav {
+  display: none;
+  height: 100vh;
+  position: fixed;
+  z-index: 30;
+  width: 50%;
+  background-color: #EB9A9A;
+}
+.slidemenu-nav .slidemenu-exit {
+  position: absolute;
+  color: white;
+  font-size: 2.4rem;
+  right: 25px;
+  top: 25px;
+}
+.slidemenu-nav ul {
+  height: 100%;
+  width: 100%;
+  padding-top: 100px;
+  padding-left: 50px;
+}
+.slidemenu-nav li {
+  margin-bottom: 60px;
+}
+.slidemenu-nav a {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.7rem;
+  color: white;
+  font-weight: 800;
+  text-transform: capitalize;
+}
+.slidemenu-nav a .slidemenu-icon {
+  margin-right: 10px;
+}
+
 @media (max-width: 1145px) {
   .wrapper {
     width: 90%;
