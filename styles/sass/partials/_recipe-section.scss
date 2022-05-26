@@ -96,3 +96,22 @@
         }
     }
 }
+
+.nothing-yet {
+    width: 100%;
+    box-shadow: 0 3px 10px rgba(240, 187, 183, 0.716);
+    background-color: $quinary;
+    border-radius: 5px;
+    padding: 50px 100px;
+    margin-top: 35px;
+
+    h3 {
+        font-size: 1.8rem;
+        font-weight: 800;
+    }
+
+    p {
+        margin-top: 50px;
+        font-style: italic;
+    }
+}
