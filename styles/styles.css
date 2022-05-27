@@ -967,6 +967,20 @@ header nav ul {
   font-style: italic;
 }
 
+footer {
+  background-color: #FAF0EE;
+  background-size: cover;
+  padding: 25px 0;
+  -webkit-box-shadow: 0 3px 10px rgba(240, 187, 183, 0.716);
+          box-shadow: 0 3px 10px rgba(240, 187, 183, 0.716);
+}
+footer p {
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  color: #000000;
+  font-weight: 800;
+}
+
 .slidemenu-nav {
   height: 100vh;
   position: fixed;

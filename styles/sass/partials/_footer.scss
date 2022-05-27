@@ -1,0 +1,13 @@
+footer {
+    background-color: $quinary;
+    background-size:cover;
+    padding: 25px 0;
+    box-shadow: 0 3px 10px rgba(240, 187, 183, 0.716);
+
+    p {
+        text-align: center;
+        font-family: $secondary-font;
+        color: $tertiary;
+        font-weight: 800;
+    }
+}
