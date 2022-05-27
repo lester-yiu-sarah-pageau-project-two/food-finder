@@ -466,6 +466,7 @@ header .list-container .slideout-menu .slideout-button {
   background-color: transparent;
   color: black;
   font-size: 1.8rem;
+  cursor: pointer;
 }
 header .logo-container {
   position: relative;
@@ -1039,6 +1040,7 @@ header nav ul {
   top: 25px;
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
 .slidemenu-nav ul {
   height: 100%;
