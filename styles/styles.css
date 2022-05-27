@@ -970,15 +970,70 @@ header nav ul {
 footer {
   background-color: #FAF0EE;
   background-size: cover;
-  padding: 25px 0;
+  padding-top: 20px;
   -webkit-box-shadow: 0 3px 10px rgba(240, 187, 183, 0.716);
           box-shadow: 0 3px 10px rgba(240, 187, 183, 0.716);
+}
+footer h2 {
+  font-size: 1.8rem;
+}
+footer ul {
+  width: 45%;
+}
+footer .name {
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: 600;
+}
+footer .ul-container {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+footer .flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+}
+footer .icon-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+footer .icon-container i {
+  background-color: #EB9A9A;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  margin: 15px 15px 0 15px;
 }
 footer p {
   text-align: center;
   font-family: "Lato", sans-serif;
   color: #000000;
   font-weight: 800;
+  margin-top: 25px;
+  background-color: #EB9A9A;
 }
 
 .slidemenu-nav {

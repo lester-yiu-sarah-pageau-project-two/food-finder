@@ -1,13 +1,60 @@
 footer {
     background-color: $quinary;
     background-size:cover;
-    padding: 25px 0;
+    padding-top: 20px;
     box-shadow: 0 3px 10px rgba(240, 187, 183, 0.716);
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    ul {
+        width: 45%;
+    }
+
+    .name {
+        font-size: 1.2rem;
+        text-align: center;
+        font-weight: 600;
+    }
+
+    .ul-container {
+        margin-top: 50px;
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+    }
+
+    .flex-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .icon-container {
+        display: flex;
+        justify-content: center;
+        i {
+            background-color: $primary;
+            padding: 10px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            margin: 15px 15px 0 15px;
+        }
+    }
 
     p {
         text-align: center;
         font-family: $secondary-font;
         color: $tertiary;
         font-weight: 800;
+        margin-top: 25px;
+        background-color: $primary;
     }
 }
+
+
