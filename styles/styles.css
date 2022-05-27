@@ -967,64 +967,6 @@ header nav ul {
   font-style: italic;
 }
 
-.footer {
-  bottom: 0;
-  left: 0;
-  position: fixed;
-  width: 100%;
-  height: 2em;
-  overflow: hidden;
-  margin: 0 auto;
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
-  z-index: 999;
-}
-.footer #button {
-  width: 35px;
-  height: 35px;
-  border: #F0BBB7 12px solid;
-  border-radius: 35px;
-  margin: 0 auto;
-  position: relative;
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
-}
-.footer #button #button:hover {
-  width: 35px;
-  height: 35px;
-  border: #FAE4E4 12px solid;
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
-  position: relative;
-}
-
-.footer:hover {
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
-  height: 10em;
-}
-
-.footer #container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 5px;
-  width: 100%;
-  height: 100%;
-  position: relative;
-  top: 0;
-  left: 0;
-  background: #FAF0EE;
-}
-
-.footer #cont {
-  position: relative;
-}
-
-.footer_center {
-  text-transform: capitalize;
-}
-
 .slidemenu-nav {
   height: 100vh;
   position: fixed;
