@@ -979,6 +979,11 @@ footer h2 {
 }
 footer ul {
   width: 45%;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 3px 10px rgba(240, 187, 183, 0.716);
+          box-shadow: 0 3px 10px rgba(240, 187, 183, 0.716);
+  padding: 20px 0;
 }
 footer .name {
   font-size: 1.2rem;
@@ -1021,7 +1026,7 @@ footer .icon-container {
           justify-content: center;
 }
 footer .icon-container i {
-  background-color: #EB9A9A;
+  background-color: #F0BBB7;
   padding: 10px;
   border-radius: 50%;
   font-size: 1.5rem;
@@ -1033,7 +1038,9 @@ footer p {
   color: #000000;
   font-weight: 800;
   margin-top: 25px;
-  background-color: #EB9A9A;
+  background-color: #FFFFFF;
+  -webkit-box-shadow: 0 3px 10px rgba(240, 187, 183, 0.716);
+          box-shadow: 0 3px 10px rgba(240, 187, 183, 0.716);
 }
 
 .slidemenu-nav {
