@@ -2,7 +2,7 @@
     height: 100vh;
     position: fixed;
     z-index: 30;
-    width: 50%;
+    width: 35%;
     background-color: $primary;
 
     .close-menu-button {
@@ -19,8 +19,7 @@
     ul {
         height: 100%;
         width: 100%;
-        padding-top: 100px;
-        padding-left: 50px;
+        padding: 100px 50px 0 75px;
     }
 
     li {

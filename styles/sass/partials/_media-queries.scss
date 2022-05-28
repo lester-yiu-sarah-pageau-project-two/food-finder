@@ -80,6 +80,12 @@
     .recipe-wrap .column a {
         width: 43%;
     }
+
+    //slidemenu 
+
+    .slidemenu-nav {
+        width: 45%;
+    }
 }
 
 @media (max-width: 785px) {
@@ -135,6 +141,20 @@
 
         h2 {
             margin: 30px 0px;
+        }
+    }
+
+    //slidemenu 
+
+    .slidemenu-nav {
+        width: 50%;
+
+        a {
+            font-size: 1.4rem;
+        }
+
+        ul {
+            padding: 100px 50px 0 50px;
         }
     }
 
@@ -219,6 +239,24 @@
                 font-size: 1.3rem;
             }
         }
+    }
+
+    //slidemenu 
+
+    .slidemenu-nav {
+        width: 100%;
+
+        ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            li {
+                margin-bottom: 120px;
+            }
+        }
+
     }
 
     //diet form section

@@ -382,15 +382,6 @@ body {
           animation-fill-mode: forwards;
 }
 
-.slidemenu-nav-open {
-  -webkit-animation: slideInAnimation ease 0.3s;
-          animation: slideInAnimation ease 0.3s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-
 @-webkit-keyframes fadeInAnimation {
   0% {
     opacity: 0;
@@ -408,26 +399,6 @@ body {
     opacity: 1;
   }
 }
-@-webkit-keyframes slideInAnimation {
-  0% {
-    width: 0%;
-    opacity: 0;
-  }
-  100% {
-    width: 50%;
-    opacity: 1;
-  }
-}
-@keyframes slideInAnimation {
-  0% {
-    width: 0%;
-    opacity: 0;
-  }
-  100% {
-    width: 50%;
-    opacity: 1;
-  }
-}
 header {
   min-height: 100vh;
   background: url("../assets/custom-wave.jpg");
@@ -442,7 +413,7 @@ header .list-container {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 54%;
+  width: 48%;
 }
 header .list-container .nav-anchor-container {
   margin: auto 0;
@@ -1049,7 +1020,7 @@ footer p {
   height: 100vh;
   position: fixed;
   z-index: 30;
-  width: 50%;
+  width: 35%;
   background-color: #EB9A9A;
 }
 .slidemenu-nav .close-menu-button {
@@ -1065,8 +1036,7 @@ footer p {
 .slidemenu-nav ul {
   height: 100%;
   width: 100%;
-  padding-top: 100px;
-  padding-left: 50px;
+  padding: 100px 50px 0 75px;
 }
 .slidemenu-nav li {
   margin-bottom: 60px;
@@ -1153,6 +1123,10 @@ footer p {
   .recipe-wrap .column a {
     width: 43%;
   }
+
+  .slidemenu-nav {
+    width: 45%;
+  }
 }
 @media (max-width: 785px) {
   header .logo-container .logo-text {
@@ -1199,6 +1173,16 @@ header .logo-container .logo-shadow {
   }
   .header-content h2 {
     margin: 30px 0px;
+  }
+
+  .slidemenu-nav {
+    width: 50%;
+  }
+  .slidemenu-nav a {
+    font-size: 1.4rem;
+  }
+  .slidemenu-nav ul {
+    padding: 100px 50px 0 50px;
   }
 
   .diet-form {
@@ -1255,6 +1239,28 @@ header .logo-container .logo-shadow {
   }
   .header-content .header-text h2 {
     font-size: 1.3rem;
+  }
+
+  .slidemenu-nav {
+    width: 100%;
+  }
+  .slidemenu-nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .slidemenu-nav ul li {
+    margin-bottom: 120px;
   }
 
   .meal-filter .diet-choices {
