@@ -940,6 +940,7 @@ header nav ul {
 .no-results p {
   margin-top: 50px;
   font-style: italic;
+  text-align: center;
 }
 
 .display-none {
@@ -1330,7 +1331,7 @@ header .logo-container .logo-shadow {
     left: -45%;
   }
   .recipe-reccos .background-image-four {
-    top: 12%;
+    top: 300px;
     right: -45%;
   }
 }
