@@ -5,15 +5,15 @@
     .background-image-three {
         width: 380px;
         bottom: 165px;
-        left: -10%;
+        left: -14%;
         position: absolute;
         transform:rotate(165deg);
     }
 
     .background-image-four {
         width: 320px;
-        top: 8%;
-        right: -8%;
+        top: 18%;
+        right: -14%;
         position: absolute;
     }
 
@@ -97,7 +97,8 @@
     }
 }
 
-.nothing-yet {
+.nothing-yet,
+.no-results {
     width: 100%;
     box-shadow: 0 3px 10px rgba(240, 187, 183, 0.716);
     background-color: $quinary;
@@ -114,4 +115,8 @@
         margin-top: 50px;
         font-style: italic;
     }
+}
+
+.display-none {
+    display: none;
 }

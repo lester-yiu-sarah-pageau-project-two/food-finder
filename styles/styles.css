@@ -815,15 +815,15 @@ header nav ul {
 .recipe-reccos .background-image-three {
   width: 380px;
   bottom: 165px;
-  left: -10%;
+  left: -14%;
   position: absolute;
   -webkit-transform: rotate(165deg);
           transform: rotate(165deg);
 }
 .recipe-reccos .background-image-four {
   width: 320px;
-  top: 8%;
-  right: -8%;
+  top: 18%;
+  right: -14%;
   position: absolute;
 }
 .recipe-reccos .recipe-reccos-content {
@@ -921,7 +921,8 @@ header nav ul {
   width: 100%;
 }
 
-.nothing-yet {
+.nothing-yet,
+.no-results {
   width: 100%;
   -webkit-box-shadow: 0 3px 10px rgba(240, 187, 183, 0.716);
           box-shadow: 0 3px 10px rgba(240, 187, 183, 0.716);
@@ -930,19 +931,26 @@ header nav ul {
   padding: 50px 100px;
   margin-top: 35px;
 }
-.nothing-yet h3 {
+.nothing-yet h3,
+.no-results h3 {
   font-size: 1.8rem;
   font-weight: 800;
 }
-.nothing-yet p {
+.nothing-yet p,
+.no-results p {
   margin-top: 50px;
   font-style: italic;
+}
+
+.display-none {
+  display: none;
 }
 
 footer {
   background-color: #FAF0EE;
   background-size: cover;
   padding: 20px 0;
+  position: relative;
 }
 footer h2 {
   font-size: 1.8rem;
@@ -1126,6 +1134,17 @@ footer p {
 
   .slidemenu-nav {
     width: 45%;
+  }
+
+  .recipe-reccos {
+    padding-bottom: 100px;
+    position: relative;
+  }
+  .recipe-reccos .background-image-three {
+    left: -22%;
+  }
+  .recipe-reccos .background-image-four {
+    right: -22%;
   }
 }
 @media (max-width: 785px) {

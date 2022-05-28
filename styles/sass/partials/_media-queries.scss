@@ -86,6 +86,21 @@
     .slidemenu-nav {
         width: 45%;
     }
+
+    //recipe recco section
+
+    .recipe-reccos {
+        padding-bottom: 100px;
+        position: relative;
+
+        .background-image-three {
+            left: -22%;
+        }
+
+        .background-image-four {
+            right: -22%;
+        }
+    }
 }
 
 @media (max-width: 785px) {
