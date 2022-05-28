@@ -1,8 +1,7 @@
 footer {
     background-color: $quinary;
     background-size:cover;
-    padding-top: 20px;
-    box-shadow: 0 3px 10px rgba(240, 187, 183, 0.716);
+    padding: 20px 0;
 
     h2 {
         font-size: 1.8rem;
@@ -24,7 +23,7 @@ footer {
     }
 
     .ul-container {
-        margin-top: 50px;
+        margin-top: 30px;
         display: flex;
         width: 100%;
         justify-content: space-around;
@@ -53,13 +52,16 @@ footer {
     }
 
     p {
+        width: 95%;
         text-align: center;
         font-family: $secondary-font;
         color: $tertiary;
         font-weight: 800;
         margin-top: 25px;
         background-color: $secondary;
-        box-shadow: 0 3px 10px rgba(240, 187, 183, 0.716); 
+        padding: 10px 0;
+        border-radius: 5px;
+        box-shadow: 0 3px 10px rgba(240, 187, 183, 0.716);
     }
 }
 

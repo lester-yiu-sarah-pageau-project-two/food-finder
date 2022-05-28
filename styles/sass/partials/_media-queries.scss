@@ -168,6 +168,25 @@
         }
     }
 
+    //footer section
+
+    footer {
+        .ul-container {
+            flex-direction: column;
+            align-items: center;
+            margin-top: 15px;
+
+            ul {
+                margin: 15px 0;
+                width: 95%;
+
+                i {
+                    font-size: 1.8rem;
+                }
+            }
+        }
+        
+    }
 }
 
 @media (max-width: 515px) {

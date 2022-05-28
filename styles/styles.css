@@ -970,9 +970,7 @@ header nav ul {
 footer {
   background-color: #FAF0EE;
   background-size: cover;
-  padding-top: 20px;
-  -webkit-box-shadow: 0 3px 10px rgba(240, 187, 183, 0.716);
-          box-shadow: 0 3px 10px rgba(240, 187, 183, 0.716);
+  padding: 20px 0;
 }
 footer h2 {
   font-size: 1.8rem;
@@ -991,7 +989,7 @@ footer .name {
   font-weight: 600;
 }
 footer .ul-container {
-  margin-top: 50px;
+  margin-top: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1033,12 +1031,15 @@ footer .icon-container i {
   margin: 15px 15px 0 15px;
 }
 footer p {
+  width: 95%;
   text-align: center;
   font-family: "Lato", sans-serif;
   color: #000000;
   font-weight: 800;
   margin-top: 25px;
   background-color: #FFFFFF;
+  padding: 10px 0;
+  border-radius: 5px;
   -webkit-box-shadow: 0 3px 10px rgba(240, 187, 183, 0.716);
           box-shadow: 0 3px 10px rgba(240, 187, 183, 0.716);
 }
@@ -1218,6 +1219,24 @@ header .logo-container .logo-shadow {
   .background-image-container .background-image-four {
     top: 18%;
     right: -28%;
+  }
+
+  footer .ul-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 15px;
+  }
+  footer .ul-container ul {
+    margin: 15px 0;
+    width: 95%;
+  }
+  footer .ul-container ul i {
+    font-size: 1.8rem;
   }
 }
 @media (max-width: 515px) {
